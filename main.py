@@ -16,10 +16,10 @@ from sqlalchemy.orm import mapped_column
 from sqlalchemy.orm import relationship
 from dotenv import load_dotenv
 
-load_dotenv()
-app = Flask(__name__)
 
-app.config['SECRET_KEY'] = os.environ.get("app_key")
+app = Flask(__name__)
+load_dotenv()
+app.config['SECRET_KEY'] = os.getenv("app_key")
 ckeditor = CKEditor(app)
 Bootstrap(app)
 

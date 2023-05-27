@@ -34,6 +34,7 @@ login_manager.init_app(app)
 gravatar = Gravatar(app, size=100, rating='g', default='retro', force_default=False, force_lower=False, use_ssl=False,
                     base_url=None)
 
+
 # CONFIGURE TABLES
 class User(UserMixin, db.Model):
     __tablename__ = "users"
